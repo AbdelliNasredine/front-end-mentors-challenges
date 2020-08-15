@@ -1,0 +1,89 @@
+:root {
+  /* defining colors */
+  --dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* typography styles */
+body {
+  background-color: var(--light-grayish-blue);
+  font-size: 13px;
+  font-family: "Manrope", sans-serif;
+}
+
+/* article styling */
+article {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--desaturated-dark-blue);
+}
+
+article > img {
+  width: 100%;
+  height: 260px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  object-fit: cover;
+}
+
+article main,
+article footer {
+  padding: 1.5rem;
+  background-color: #fff;
+}
+
+article footer {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+article h2 {
+  margin-bottom: 1rem;
+}
+
+article h4 {
+  margin-bottom: 0.25rem;
+}
+
+article h2,
+article h4 {
+  color: var(--dark-grayish-blue);
+}
+
+article footer {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+article footer .author {
+  display: flex;
+}
+
+article footer .author img {
+  margin-right: 1rem;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+}
+
+article footer button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--light-grayish-blue);
+  cursor: pointer;
+}
