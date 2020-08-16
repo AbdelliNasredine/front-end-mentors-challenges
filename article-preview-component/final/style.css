@@ -102,6 +102,17 @@ article footer .share {
   display: none;
 }
 
+article footer .share img {
+  margin-left: 1rem;
+}
+
+article footer .share span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 article footer a {
   text-align: center;
   padding: 0.75rem;
@@ -111,10 +122,22 @@ article footer a {
   cursor: pointer;
 }
 
-article footer a:focus + .author {
+/* article footer a:focus + .author {
   display: none;
 }
 
 article footer a:focus ~ .share {
   display: flex;
+} */
+
+/* TESTING */
+.show {
+  display: flex !important;
+}
+.hide {
+  display: none !important;
+}
+
+.bg {
+  background-color: var(--dark-grayish-blue);
 }
