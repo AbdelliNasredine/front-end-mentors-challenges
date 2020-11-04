@@ -3,3 +3,5 @@
 ## Newbie
 
 - [ ] [Article preview component](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT)
+
+- [] [FAQ accordion card](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam)
