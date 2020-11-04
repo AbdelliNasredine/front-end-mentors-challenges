@@ -1,0 +1,22 @@
+/* ADDING CSS VARIABLES */
+:root {
+
+  /* SIZE BEAKE POINTS */
+  --desktop-width: 1440px;
+  --mobile-width: 375px;
+
+  /* COLORS */
+  --text-primary-blue:hsl(238, 29%, 16%);
+  --text-primary-red:hsl(14, 88%, 65%);
+  --gradiant-color1: hsl(273, 75%, 66%);
+  --gradiant-color2: hsl(240, 73%, 65%);
+  --text-normal-dark-blue: hsl(237, 12%, 33%);
+  --text-normal-blue: hsl(240, 6%, 50%);
+  --divider-color: hsl(240, 5%, 91%);
+
+  /* TYPOGRAPHY */
+  --text-body-size: 12px;
+  --font-family: 'Kumbh Sans', sans-serif;
+
+  /* NOTE : font weights = {400, 700} */
+}
