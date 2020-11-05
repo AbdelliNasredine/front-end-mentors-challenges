@@ -1,13 +1,12 @@
 /* ADDING CSS VARIABLES */
 :root {
-
   /* SIZE BEAKE POINTS */
   --desktop-width: 1440px;
   --mobile-width: 375px;
 
   /* COLORS */
-  --text-primary-blue:hsl(238, 29%, 16%);
-  --text-primary-red:hsl(14, 88%, 65%);
+  --text-primary-blue: hsl(238, 29%, 16%);
+  --text-primary-red: hsl(14, 88%, 65%);
   --gradiant-color1: hsl(273, 75%, 66%);
   --gradiant-color2: hsl(240, 73%, 65%);
   --text-normal-dark-blue: hsl(237, 12%, 33%);
@@ -16,7 +15,99 @@
 
   /* TYPOGRAPHY */
   --text-body-size: 12px;
-  --font-family: 'Kumbh Sans', sans-serif;
+  --font-family: "Kumbh Sans", sans-serif;
+
+  --box-shadow: 20px 0px 20px 10px rgba(0, 0, 0, 0.1);
 
   /* NOTE : font weights = {400, 700} */
+}
+
+/* RESETS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: var(--font-family);
+  font-size: var(--text-body-size);
+  background-image: linear-gradient(
+    var(--gradiant-color1),
+    var(--gradiant-color2)
+  );
+  background-repeat: no-repeat;
+}
+
+/* MOBILE FIRST */
+/* MAIN CONTAINER */
+.container {
+  width: 100%;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.faq {
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary-blue);
+}
+
+section {
+  border-bottom: 1px solid var(--divider-color);
+}
+
+section.active p {
+  display: block;
+}
+
+section.active h2 {
+  font-weight: 700;
+}
+
+section.active img {
+  transform: rotate(180deg);
+  padding: 0 0 1.5rem 0;
+}
+
+section h2 {
+  width: 90%;
+  display: inline-block;
+  color: var(--text-primary-blue);
+  font-size: 1.125rem;
+  font-weight: 400;
+  padding: 1.025em 0;
+}
+
+section h2:hover {
+  color: var(--text-primary-red);
+  cursor: pointer;
+}
+
+section img {
+  float: right;
+  padding: 1.5rem 0 0 0;
+  width: 1rem;
+}
+
+section p {
+  display: none;
+  width: 90%;
+  color: var(--text-normal-blue);
+  font-size: 1.125rem;
+  padding-bottom: 1.025em;
 }
