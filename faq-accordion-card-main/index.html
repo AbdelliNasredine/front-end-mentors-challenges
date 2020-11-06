@@ -4,60 +4,203 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
+
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <title>Frontend Mentor | FAQ Accordion Card</title>
-    <!-- CSS LINK -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <!-- GOOGLE FONTS -->
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
-  </head>
 
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        margin: 0;
+        padding: 3rem;
+        height: 100vh;
+        background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%))
+          no-repeat;
+        font-family: "Kumbh Sans", sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+      }
+      .attribution {
+        padding: 1rem 0;
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      /* FAQ */
+      .faq {
+        margin-top: 5rem;
+        position: relative;
+        padding: 5rem 2rem 2rem 2rem;
+        background: #ffffff;
+        border-radius: 1.8rem;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+      }
+      .faq h2 {
+        padding: 2rem 0;
+        text-align: center;
+        font-size: 2rem;
+        color: hsl(238, 29%, 16%);
+      }
+
+      .faq > div {
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid hsl(240, 5%, 91%);
+      }
+
+      .faq > div.active a {
+        font-weight: 700;
+        color: hsl(238, 29%, 16%);
+      }
+
+      .faq > div.active a img {
+        transform: rotate(180deg);
+      }
+
+      .faq > div.active p {
+        padding-top: 1rem;
+        height: auto;
+      }
+
+      .faq p {
+        width: 90%;
+        height: 0;
+        overflow: hidden;
+        color: hsl(240, 6%, 50%);
+        line-height: 1.5;
+      }
+
+      .faq a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+        color: hsl(237, 12%, 33%);
+        font-size: 1rem;
+      }
+
+      .faq a:hover {
+        color: hsl(14, 88%, 65%);
+      }
+
+      /* ILLUSTRATION */
+      .illustration {
+        z-index: 1;
+        position: absolute;
+        top: -2%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .illustration.top {
+        z-index: 2;
+        margin-left: -10px;
+        transform: translate(-50%, -50%);
+      }
+
+      /* RESPONSIVE - DESKTOP VERSION */
+      /* TODO */
+    </style>
+  </head>
   <body>
-    <div class="container">
-      <div class="faq">
-        <h1>FAQ</h1>
-        <section>
-          <h2>What is the maximum file upload size?</h2>
-          <img src="./images/icon-arrow-down.svg" alt="arrow down image" />
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
-            repellat recusandae, suscipit possimus quaerat consectetur odio
-            dolor modi beatae ut perspiciatis excepturi eaque cumque consequatur
-            illo consequuntur harum sed ducimus?
-          </p>
-        </section>
-        <section>
-          <h2>What is the maximum file upload size?</h2>
-          <img src="./images/icon-arrow-down.svg" alt="arrow down image" />
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
-            repellat recusandae, suscipit possimus quaerat consectetur odio
-            dolor modi beatae ut perspiciatis excepturi eaque cumque consequatur
-            illo consequuntur harum sed ducimus?
-          </p>
-        </section>
-        <section>
-          <h2>What is the maximum file upload size?</h2>
-          <img src="./images/icon-arrow-down.svg" alt="arrow down image" />
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
-            repellat recusandae, suscipit possimus quaerat consectetur odio
-            dolor modi beatae ut perspiciatis excepturi eaque cumque consequatur
-            illo consequuntur harum sed ducimus?
-          </p>
-        </section>
+    <div class="faq">
+      <!-- illustrations -->
+      <img
+        class="illustration top"
+        src="./images/illustration-woman-online-mobile.svg"
+        alt=""
+      />
+      <img class="illustration" src="./images/bg-pattern-mobile.svg" alt="" />
+      <!-- FAQ section -->
+      <h2>FAQ</h2>
+      <div class="active">
+        <a href="#"
+          >How many team members can I invite?
+          <img src="./images/icon-arrow-down.svg" alt=""
+        /></a>
+        <p>
+          You can invite up to 2 additional users on the Free plan. There is no
+          limit on team members for the Premium plan.
+        </p>
+      </div>
+      <div>
+        <a href="#"
+          >What is the maximum file upload size?<img
+            src="./images/icon-arrow-down.svg"
+            alt=""
+        /></a>
+        <p>
+          No more than 2GB. All files in your account must fit your allotted
+          storage space.
+        </p>
+      </div>
+      <div>
+        <a href="#"
+          >How do I reset my password?<img
+            src="./images/icon-arrow-down.svg"
+            alt=""
+        /></a>
+        <p>
+          Click “Forgot password” from the login page or “Change password” from
+          your profile page. A reset link will be emailed to you.
+        </p>
+      </div>
+      <div>
+        <a href="#"
+          >Can I cancel my subscription?<img
+            src="./images/icon-arrow-down.svg"
+            alt=""
+        /></a>
+        <p>
+          Yes! Send us a message and we’ll process your request no questions
+          asked.
+        </p>
+      </div>
+      <div>
+        <a href="#"
+          >Do you provide additional support?<img
+            src="./images/icon-arrow-down.svg"
+            alt=""
+        /></a>
+        <p>
+          Chat and email support is available 24/7. Phone lines are open during
+          normal business hours.
+        </p>
       </div>
     </div>
 
-    <!-- JS -->
-    <script src="./js/script.js"></script>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+    <script>
+      var faq_links = document.querySelectorAll(".faq a");
+      faq_links.forEach(function (link) {
+        link.addEventListener("click", function () {
+          var parent = this.parentElement;
+          parent.classList.toggle("active");
+        });
+      });
+    </script>
   </body>
 </html>
