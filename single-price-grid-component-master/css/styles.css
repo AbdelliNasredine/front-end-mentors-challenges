@@ -1,0 +1,123 @@
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --light-cyan: hsl(179, 43%, 60%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+  --font-family: "Karla", sans-serif;
+  --font-bold: 700;
+  --font-normal: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--light-gray);
+  font-family: var(--font-family);
+  font-weight: var(--font-normal);
+}
+
+/* COMMON */
+h3 {
+  font-size: 1.375rem;
+}
+p {
+  margin: 1.5rem 0;
+  font-size: 1rem;
+  font-weight: var(--font-normal);
+}
+span {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--cyan);
+}
+
+/* GRID CONTAINER */
+.grid-container {
+  display: grid;
+  width: 90%;
+  margin: 1rem auto;
+}
+
+/* GRID ITEMS */
+.grid-container .item {
+  padding: 1.5rem;
+}
+
+/* FIRST ITEM */
+.item:nth-child(1) {
+  background-color: white;
+  border-radius: 5px 5px 0 0;
+}
+.item:nth-child(1) h3 {
+  color: var(--cyan);
+  font-weight: var(--font-bold);
+}
+
+.item:nth-child(1) p {
+  color: var(--grayish-blue);
+  line-height: 1.7;
+}
+
+.item:nth-child(1) p span {
+  color: var(--bright-yellow);
+  font-weight: var(--font-bold);
+  line-height: 1;
+}
+
+/* SECOND ITEM */
+.item:nth-child(2) {
+  background-color: var(--cyan);
+  color: white;
+}
+
+.item:nth-child(2) span {
+  font-size: 1.5rem;
+  font-weight: var(--font-bold);
+}
+
+.item:nth-child(2) span small {
+  font-size: 1rem;
+  font-weight: var(--font-normal);
+  opacity: 60%;
+}
+
+.item:nth-child(2) a {
+  display: block;
+  padding: 1em;
+  background-color: var(--bright-yellow);
+  color: white;
+  text-align: center;
+  font-weight: var(--font-bold);
+  border-radius: 5px;
+}
+
+/* THIRD ITEM */
+.item:nth-child(3) {
+  color: white;
+  background-color: var(--light-cyan);
+  border-radius: 0 0 5px 5px;
+}
+
+.item:nth-child(3) ul {
+  margin-top: 1rem;
+}
+
+.item:nth-child(3) li {
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+  font-weight: var(--font-normal);
+}
