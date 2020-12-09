@@ -15,9 +15,9 @@
   --font-weight-bold: 700;
   /* BACKGROUNDS */
   --bg-half: -489px;
-  --bg-body: no-repeat url("/images/bg-pattern-top.svg"),
-    no-repeat url("/images/bg-pattern-bottom.svg"), var(--dark-cyan);
-  --bg-card: no-repeat url("/images/bg-pattern-card.svg");
+  --bg-body: no-repeat url("../images/bg-pattern-top.svg"),
+    no-repeat url("../images/bg-pattern-bottom.svg"), var(--dark-cyan);
+  --bg-card: no-repeat url("../images/bg-pattern-card.svg");
 }
 
 /* FRONTEND MENTORS ATTRIBUTION */
