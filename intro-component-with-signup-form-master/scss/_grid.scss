@@ -1,0 +1,19 @@
+// grid
+.grid {
+  display: flex;
+  flex-direction: column;
+  &__column {
+    flex-basis: 100%;  
+    &--center {
+      align-self: center;
+      justify-self: center;
+    }
+  }
+  // desktop
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    &__column {
+      flex-basis: 50%;
+    }
+  }
+}
