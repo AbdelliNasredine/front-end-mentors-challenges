@@ -9,6 +9,12 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/css/main.css" />
     <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -19,16 +25,27 @@
   </head>
   <body>
     <section class="testimonial">
-      <div class="testimonial__wraper">
-        <div class="slider">
-          <div class="slider__item">
-            <div class="slider__image">
-              <img
-                src="./images/image-tanya.jpg"
-                alt="Tanya's photo"
-                class="testimonial__photo"
-              />
-              <div class="slider__actions">
+      <div class="slider">
+        <div class="slider__item testimonial__wrapper">
+          <div class="testimonial__image">
+            <img src="./images/image-tanya.jpg" alt="Tanya's photo" />
+          </div>
+          <div class="testimonial__content">
+            <p class="testimonial__paragraph">
+              “ I’ve been interested in coding for a while but never taken the
+              jump, until now. I couldn’t recommend this course enough. I’m now
+              in the job of my dreams and so excited about the future. ”
+            </p>
+            <h5 class="testimonial__author">Tanya Sinclair</h5>
+            <span class="testimonial__job">UX Engineer</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+
+                    <div class="slider__actions">
                 <button class="slider__btn">
                   <img src="./images/icon-prev.svg" alt="previous icon" />
                 </button>
@@ -36,22 +53,7 @@
                   <img src="./images/icon-next.svg" alt="next icon" />
                 </button>
               </div>
-            </div>
-            <div class="testimonial__content">
-              <p class="testimonial__paragraph">
-                “ I’ve been interested in coding for a while but never taken the
-                jump, until now. I couldn’t recommend this course enough. I’m
-                now in the job of my dreams and so excited about the future. ”
-              </p>
-              <h5 class="testimonial__author">Tanya Sinclair</h5>
-              <h6 class="testimonial__job">UX Engineer</h6>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- 
   “ If you want to lay the best foundation possible I’d recommend taking this course. 
   The depth the instructors go into is incredible. I now feel so confident about 
   starting up as a professional developer. ”

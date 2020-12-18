@@ -1,0 +1,175 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #202046;
+  text-align: center;
+}
+
+.testimonial {
+  width: 100%;
+  height: 100vh;
+  padding: 1rem;
+  background-image: url("/images/pattern-curve.svg");
+  background-repeat: no-repeat;
+  background-position: bottom 0 left 0;
+  background-size: contain;
+}
+
+.testimonial__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testimonial__image {
+  padding: 2.5rem;
+  background-image: url("/images/pattern-bg.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.testimonial__image > img {
+  border-radius: .25rem;
+  -webkit-filter: drop-shadow(0 1rem 1.5rem rgba(32, 32, 70, 0.2));
+          filter: drop-shadow(0 1rem 1.5rem rgba(32, 32, 70, 0.2));
+}
+
+.testimonial__content {
+  padding: 0 .5rem;
+  font-weight: 300;
+  font-size: 1.125rem;
+}
+
+.testimonial__paragraph {
+  position: relative;
+  margin: 1rem 0;
+  padding: 2rem 0;
+}
+
+.testimonial__paragraph::before {
+  content: "";
+  display: block;
+  width: 100%;
+  top: 0;
+  position: absolute;
+  height: 3.5rem;
+  background-image: url("/images/pattern-quotes.svg");
+  background-repeat: no-repeat;
+  background-position: top 0% right 50%;
+  background-size: contain;
+}
+
+.testimonial__author {
+  font-size: 1.125rem;
+  color: #202046;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.testimonial__job {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #babacf;
+  line-height: 1;
+}
+/*# sourceMappingURL=main.css.map */
