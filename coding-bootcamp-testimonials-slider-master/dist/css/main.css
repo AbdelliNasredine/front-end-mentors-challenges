@@ -172,4 +172,24 @@ body {
   color: #babacf;
   line-height: 1;
 }
+
+.slider__actions {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-column-gap: .5rem;
+          column-gap: .5rem;
+  border-radius: 3rem;
+  background-color: #ffffff;
+  padding: 1rem 0;
+  -webkit-filter: drop-shadow(0 0.5rem 1rem rgba(32, 32, 70, 0.2));
+          filter: drop-shadow(0 0.5rem 1rem rgba(32, 32, 70, 0.2));
+}
+
+.slider__btn {
+  cursor: pointer;
+  border: none;
+  padding: 0 1rem;
+  background-color: transparent;
+}
 /*# sourceMappingURL=main.css.map */

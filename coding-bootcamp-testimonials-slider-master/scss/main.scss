@@ -79,3 +79,22 @@ body {
     line-height: 1;
   }
 }
+
+// slider
+.slider {
+  &__actions {
+    display: inline-flex;
+    column-gap: .5rem;
+    border-radius: 3rem;
+    background-color: #ffffff;
+    padding: 1rem 0;
+    $shadow-color:  transparentize($dark-blue, .8);
+    filter: drop-shadow(0 .5rem 1rem $shadow-color);
+  }
+  &__btn {
+    cursor: pointer;
+    border: none;
+    padding: 0 1rem;
+    background-color: transparent;
+  }
+}
