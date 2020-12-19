@@ -34,7 +34,6 @@ dd {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -96,7 +95,6 @@ body {
 
 .testimonial {
   width: 100%;
-  height: 100vh;
   padding: 1rem;
   background-image: url("/images/pattern-curve.svg");
   background-repeat: no-repeat;
@@ -105,6 +103,7 @@ body {
 }
 
 .testimonial__wrapper {
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -129,6 +128,8 @@ body {
 }
 
 .testimonial__image > img {
+  max-width: 100%;
+  width: 100%;
   border-radius: .25rem;
   -webkit-filter: drop-shadow(0 1rem 1.5rem rgba(32, 32, 70, 0.2));
           filter: drop-shadow(0 1rem 1.5rem rgba(32, 32, 70, 0.2));
@@ -155,7 +156,7 @@ body {
   height: 3.5rem;
   background-image: url("/images/pattern-quotes.svg");
   background-repeat: no-repeat;
-  background-position: top 0% right 50%;
+  background-position: top 0 right 50%;
   background-size: contain;
 }
 
@@ -173,15 +174,47 @@ body {
   line-height: 1;
 }
 
+@media screen and (min-width: 1440px) {
+  .testimonial {
+    background-size: auto;
+  }
+  .testimonial__wrapper {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .testimonial__image {
+    z-index: 1;
+    position: absolute;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    padding: 4rem;
+  }
+  .testimonial__content {
+    position: relative;
+    z-index: 2;
+    width: 60%;
+    font-size: 2rem;
+    text-align: left;
+  }
+  .testimonial__paragraph:before {
+    background-position: top 0 left 4rem;
+  }
+  .testimonial__job, .testimonial__author {
+    display: inline;
+  }
+}
+
 .slider__actions {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-column-gap: .5rem;
-          column-gap: .5rem;
-  border-radius: 3rem;
-  background-color: #ffffff;
-  padding: 1rem 0;
   -webkit-filter: drop-shadow(0 0.5rem 1rem rgba(32, 32, 70, 0.2));
           filter: drop-shadow(0 0.5rem 1rem rgba(32, 32, 70, 0.2));
 }
@@ -189,7 +222,18 @@ body {
 .slider__btn {
   cursor: pointer;
   border: none;
-  padding: 0 1rem;
-  background-color: transparent;
+  padding: 1rem;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+.slider__btn:first-child {
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+.slider__btn:last-child {
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
 }
 /*# sourceMappingURL=main.css.map */

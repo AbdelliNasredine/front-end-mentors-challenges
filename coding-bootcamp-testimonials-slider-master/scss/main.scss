@@ -20,13 +20,13 @@ body {
 // testimonial
 .testimonial {
   width: 100%;
-  height: 100vh;
   padding: 1rem;
   background-image: url("/images/pattern-curve.svg");
   background-repeat: no-repeat;
   background-position: bottom 0 left 0; 
   background-size: contain;
   &__wrapper {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,6 +39,8 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     & > img {
+      max-width: 100%;
+      width: 100%;
       border-radius: .25rem;
       $shadow-color:  transparentize($dark-blue, .8);
       filter: drop-shadow(0 1rem 1.5rem $shadow-color);
@@ -62,7 +64,7 @@ body {
       height: 3.5rem;
       background-image: url("/images/pattern-quotes.svg");
       background-repeat: no-repeat;
-      background-position: top 0% right 50%;
+      background-position: top 0 right 50%;
       background-size: contain;
     }
   }
@@ -78,23 +80,57 @@ body {
     color: $grayish-blue;
     line-height: 1;
   }
+  @media screen and (min-width: 1440px) {
+    background-size: auto;
+    &__wrapper {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-start;
+    }
+    &__image {
+      z-index: 1;
+      position: absolute;
+      align-self: flex-end;
+      padding: 4rem;
+    }
+    &__content {
+      position: relative;
+      z-index: 2;
+      width: 60%;
+      font-size: 2rem;
+      text-align: left;
+    }
+    &__paragraph:before {
+      background-position: top 0 left 4rem;
+    } 
+    &__job, &__author {
+      display: inline;
+    }
+  }
 }
 
 // slider
 .slider {
   &__actions {
     display: inline-flex;
-    column-gap: .5rem;
-    border-radius: 3rem;
-    background-color: #ffffff;
-    padding: 1rem 0;
     $shadow-color:  transparentize($dark-blue, .8);
     filter: drop-shadow(0 .5rem 1rem $shadow-color);
   }
   &__btn {
     cursor: pointer;
     border: none;
-    padding: 0 1rem;
-    background-color: transparent;
+    padding: 1rem;
+    margin: 0;
+    background-color: #ffffff;
+    &:first-child {
+      border-top-left-radius: 2rem;
+      border-bottom-left-radius: 2rem;
+    }
+    &:last-child {
+      border-top-right-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+    }
   }
 }
