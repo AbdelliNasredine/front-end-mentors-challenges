@@ -118,6 +118,12 @@ body {
   position: relative;
   width: inherit;
   height: 100%;
+  &__item {
+    display: none;
+  }
+  .active {
+    display: flex;
+  }
   &__actions {
     z-index: 3;
     display: inline-flex;
@@ -146,6 +152,9 @@ body {
     &:last-child {
       border-top-right-radius: 2rem;
       border-bottom-right-radius: 2rem;
+    }
+    &[disabled] {
+      cursor:not-allowed;
     }
   }
 }

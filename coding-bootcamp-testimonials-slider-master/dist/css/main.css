@@ -223,6 +223,16 @@ body {
   height: 100%;
 }
 
+.slider__item {
+  display: none;
+}
+
+.slider .active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .slider__actions {
   z-index: 3;
   display: -webkit-inline-box;
@@ -259,5 +269,9 @@ body {
 .slider__btn:last-child {
   border-top-right-radius: 2rem;
   border-bottom-right-radius: 2rem;
+}
+
+.slider__btn[disabled] {
+  cursor: not-allowed;
 }
 /*# sourceMappingURL=main.css.map */
