@@ -1,0 +1,91 @@
+// vars
+$desaturated-red: hsl(0, 36%, 70%);
+$soft-red: hsl(0, 93%, 68%);
+$dark-grayish-red: hsl(0, 6%, 24%);
+$font-size: 16px;
+$font-family: 'Josefin Sans', sans-serif;
+$font-light: 300;
+$font-regular: 400;
+$font-bold: 600;
+
+
+// resets
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  padding: 2rem;
+}
+
+
+body {
+  background: url("/images/bg-pattern-desktop.svg");
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-regular;
+  color: $desaturated-red;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: .5em;
+  padding-bottom: 1rem;
+  color: $dark-grayish-red;
+  font-weight: $font-bold;
+  span {
+    color: $desaturated-red;
+    font-weight: $font-light;
+  }
+}
+
+p, h1 {
+  text-align: center;
+}
+
+// form
+.input-group {
+  padding: 2rem 0;    
+  .input-field {
+    display: flex;
+    position: relative;
+    input {
+      font-size: 1rem;
+      background: none;
+      color: $desaturated-red;
+      font-family: $font-family;
+      flex: 1;
+      padding: 1rem 4rem 1rem 1.5rem;
+      border: none;
+      box-shadow: inset 0 0 0 1px $desaturated-red;
+      border-radius: 5rem;
+    } 
+    button {
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      height: 100%;
+      padding: 0 2rem;
+      border: none;
+      border-radius: 5rem;
+      background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%))
+    }
+  }
+}
+
+
+
+
+// attribution
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
