@@ -1,0 +1,226 @@
+// break points
+$desktop_bp: 1440px;
+$mobile_bp: 375px;
+
+// colors
+$soft_red: hsl(7, 99%, 70%);
+$yellow: hsl(51, 100%, 49%);
+$dark_de_cyan: hsl(167, 40%, 24%);
+$dark_blue: hsl(198, 62%, 26%);
+// $dark_mo_cyan: hsl(168, 49%, 59%);
+$dark_mo_cyan: rgb(144, 212, 197);
+$v_dark_de_blue: hsl(212, 27%, 19%);
+$v_dark_gray_blue: hsl(213, 9%, 39%);
+$dark_gray_blue: hsl(232, 10%, 55%);
+$gray_blue: hsl(210, 4%, 67%);
+$white: hsl(0, 0%, 100%);
+
+// font
+$font-size: 18px;
+$font-barlow: "Barlow", sans-serif;
+$font-fraunces: "Fraunces", serif;
+
+// resets
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: $font-size;
+  font-family: $font-barlow;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  li {
+    display: inline-block;
+  }
+}
+
+// START HEADER
+header {
+  height: 100vh;
+  background-image: url("../images/desktop/image-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  .container {
+    padding: 0 1.5rem;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 0;
+    li a {
+      margin: 0 0.5rem;
+      padding: 1.5rem;
+    }
+    .contact {
+      background-color: $white;
+      color: $v_dark_de_blue;
+      padding: 1rem 1.5rem;
+      border-radius: 10rem;
+      font-family: $font-fraunces;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+  .intro {
+    text-align: center;
+    padding: 4rem 0;
+    font-family: $font-fraunces;
+    font-weight: 700;
+    font-size: 2.5rem;
+    h1 {
+      margin-bottom: 3rem;
+    }
+  }
+}
+// END HEADER
+
+// START FOOTER
+footer {
+  padding: 3rem 0;
+  background-color: $dark_mo_cyan;
+  text-align: center;
+  svg path {
+    fill: $dark_de_cyan;
+  }
+  nav li {
+    margin: 2.5rem 0;
+    a {
+      margin: 0 2.5rem;
+      color: $dark_de_cyan;
+    }
+  }
+  .social a {
+    margin: 0 1rem;
+  }
+}
+// END FOOTER
+.col-2 {
+  display: flex;
+  align-items: center;
+  > * {
+    width: 50%;
+  }
+}
+
+.inner {
+  padding: 5.5rem;
+  color: $v_dark_gray_blue;
+  h2 {
+    color: $v_dark_de_blue;
+    font-family: $font-fraunces;
+    font-weight: 700;
+    font-size: 2.25rem;
+  }
+  p {
+    line-height: 1.4;
+    font-size: 1rem;
+    margin: 1.5rem 0;
+  }
+  a {
+    z-index: 999;
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    font-family: $font-fraunces;
+    text-transform: uppercase;
+    color: $v_dark_de_blue;
+    &::after {
+      content: "";
+      width: 100%;
+      display: block;
+      height: 10px;
+      border-radius: 10rem;
+      background-color: $yellow;
+    }
+  }
+}
+
+.photography {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .text {
+    z-index: 1;
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    padding: 2.5rem;
+    color: $dark_blue;
+    h3 {
+      font-family: $font-fraunces;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+  }
+}
+
+.testimonials {
+  padding: 9rem;
+
+  h3 {
+    color: $gray_blue;
+    font-family: $font-fraunces;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+  }
+
+  .col-3 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    > * {
+      width: 33, 33%;
+    }
+  }
+
+  .testimonial {
+    padding: 2rem 0;
+    text-align: center;
+    color: $v_dark_gray_blue;
+    img {
+      border-radius: 50%;
+      width: 52px;
+    }
+    p {
+      margin: 2rem 0;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+    h5 {
+      color: $v_dark_de_blue;
+      font-family: $font-fraunces;
+      font-weight: 700;
+      span {
+        color: $v_dark_gray_blue;
+        font-family: $font-barlow;
+        display: block;
+        font-size: 1rem;
+      }
+    }
+  }
+}
