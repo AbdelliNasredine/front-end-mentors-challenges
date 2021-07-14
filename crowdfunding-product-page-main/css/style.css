@@ -11,12 +11,13 @@ body {
   font-family: "Commissioner", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.4;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 a {
   text-decoration: none;
   color: white;
+  line-height: 1.6;
 }
 
 .container {
@@ -75,6 +76,9 @@ input:checked ~ .navbar__menu {
 }
 
 .navbar__menu {
+  -webkit-box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.2);
+  z-index: 999;
   display: none;
   position: absolute;
   width: 100%;
@@ -118,6 +122,101 @@ input:checked ~ .navbar__menu {
     display: inline;
     color: white;
     padding: 0 1.5rem;
+  }
+}
+
+.section {
+  position: relative;
+  padding: 2.5rem 1.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+.section__image {
+  position: absolute;
+  top: calc(-56px / 2);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.section__actions {
+  padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.section-intro {
+  position: relative;
+  top: -3.5rem;
+  text-align: center;
+}
+
+.section-intro h1 {
+  padding: 1rem 0;
+}
+
+.section-intro p {
+  color: #7a7a7a;
+  line-height: 1.6;
+}
+
+.section-intro .btn-primary {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.btn {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.btn-primary {
+  border-radius: 5em;
+  padding: 1rem 0.5rem;
+  background-color: #3cb4ac;
+}
+
+.btn-bookmark {
+  position: relative;
+  color: #7a7a7a;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 5em;
+  padding: 1rem 0.5rem;
+  background-image: url("../images/icon-bookmark.svg");
+  background-repeat: no-repeat;
+}
+
+.btn-bookmark input {
+  display: none;
+}
+
+.btn-bookmark label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bookmark__text {
+  display: none;
+  padding-left: calc(56px + 0.25rem);
+}
+
+@media screen and (min-width: 1440px) {
+  .bookmark__text {
+    display: block;
   }
 }
 /*# sourceMappingURL=style.css.map */
