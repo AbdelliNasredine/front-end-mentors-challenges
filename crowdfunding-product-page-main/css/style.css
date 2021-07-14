@@ -1,0 +1,123 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Commissioner", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header {
+  font-size: 1rem;
+  height: 300px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#000), color-stop(40%, transparent)), url("../images/image-hero-mobile.jpg");
+  background: linear-gradient(to bottom, #000, transparent 40%), url("../images/image-hero-mobile.jpg");
+  background-size: cover;
+}
+
+.navbar {
+  width: 100%;
+  padding-top: 1.5rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar .logo {
+  display: inline-block;
+}
+
+.navbar input {
+  display: none;
+}
+
+input:checked ~ .navbar__toggle {
+  background-image: url("../images/icon-close-menu.svg");
+}
+
+input:checked ~ .navbar__menu {
+  display: block;
+}
+
+.navbar__toggle {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  color: white;
+  cursor: pointer;
+  background-image: url("../images/icon-hamburger.svg");
+}
+
+.navbar__menu {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 4.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+.navbar__item {
+  display: block;
+  width: 100%;
+  color: black;
+  padding: 1.5rem;
+  font-weight: 500;
+}
+
+.navbar__item:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 1440px) {
+  .navbar__toggle {
+    display: none;
+  }
+  .navbar__menu {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    background-color: transparent;
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  .navbar__item {
+    width: auto;
+    display: inline;
+    color: white;
+    padding: 0 1.5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

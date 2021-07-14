@@ -1,0 +1,119 @@
+// variable
+$bp-mobile: 375px;
+$bp-desktop: 1440px;
+$cl-m-cyan: hsl(176, 50%, 47%);
+$cl-d-cyan: hsl(176, 72%, 28%);
+$cl-black: hsl(0, 0%, 0%);
+$cl-d-gary: hsl(0, 0%, 48%);
+$f-size: 16px;
+$f-family: "Commissioner", sans-serif;
+$f-regular: 400;
+$f-medium: 500;
+$f-bold: 700;
+$l-height: 1.4;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $f-family;
+  font-size: $f-size;
+  font-weight: $f-regular;
+  line-height: $l-height;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+//  header
+header {
+  font-size: 1rem;
+  height: 300px;
+  background: linear-gradient(to bottom, #000, transparent 40%),
+    url("../images/image-hero-mobile.jpg");
+  background-size: cover;
+}
+
+// navbar
+.navbar {
+  // mobile first
+  width: 100%;
+  padding-top: 1.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .logo {
+    display: inline-block;
+  }
+  input {
+    display: none;
+  }
+  input:checked ~ &__toggle {
+    background-image: url("../images/icon-close-menu.svg");
+  }
+  input:checked ~ &__menu {
+    display: block;
+  }
+  &__toggle {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    color: white;
+    cursor: pointer;
+    background-image: url("../images/icon-hamburger.svg");
+  }
+  &__menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 4.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+  }
+  &__item {
+    $cl-border: rgba(0, 0, 0, 0.1);
+    display: block;
+    width: 100%;
+    color: $cl-black;
+    padding: 1.5rem;
+    font-weight: $f-medium;
+    &:not(:last-child) {
+      border-bottom: 1px solid $cl-border;
+    }
+  }
+
+  // desktop
+  @media screen and (min-width: $bp-desktop) {
+    &__toggle {
+      display: none;
+    }
+    &__menu {
+      display: flex !important;
+      align-items: flex-end;
+      justify-content: flex-end;
+      background-color: transparent;
+      position: sticky;
+    }
+    &__item {
+      width: auto;
+      display: inline;
+      color: white;
+      padding: 0 1.5rem;
+    }
+  }
+}
