@@ -1,0 +1,157 @@
+// font imports
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+// break-points
+$mobile: 375px;
+$desktop: 1440px;
+
+// colors
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+
+// resets
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-size: 16px;
+  font-family: "Red Hat Display", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: $desaturated-blue;
+  font-weight: 500;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../images/pattern-background-mobile.svg") no-repeat;
+  background-color: $pale-blue;
+  @media screen and (min-width: $mobile) {
+    background: url("../images/pattern-background-desktop.svg") no-repeat;
+    background-color: $pale-blue;
+  }
+}
+
+a {
+  color: $bright-blue;
+}
+
+.wrapper {
+  padding: 22px;
+}
+
+.card {
+  max-width: 450px;
+  box-shadow: 0px 24px 18px rgba($bright-blue, 0.1);
+  border-radius: 14px;
+  &__image {
+    display: flex;
+    img {
+      border-top-left-radius: 14px;
+      border-top-right-radius: 14px;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  &__body {
+    padding: 24px;
+    background-color: #fff;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    @media screen and (min-width: $desktop) {
+      padding: 48px 48px 24px 48px;
+    }
+  }
+  &__title {
+    line-height: 1;
+    color: $dark-blue;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 16px;
+    @media screen and (min-width: $desktop) {
+      font-size: 28px;
+    }
+  }
+  &__subtext {
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 24px;
+    @media screen and (min-width: $desktop) {
+      font-size: 18px;
+    }
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+.plan {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 14px;
+  border-radius: 14px;
+  background-color: $very-pale-blue;
+  &__image {
+  }
+  &__text {
+    flex: 1;
+    margin: 0 12px;
+    span {
+      display: block;
+      font-weight: 700;
+      color: $dark-blue;
+    }
+  }
+  &__action {
+    font-weight: 700;
+    transition: all 0.3s ease;
+    &:hover {
+      text-decoration: none;
+      color: $desaturated-blue;
+    }
+  }
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 16px;
+  width: 100%;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  color: inherit;
+  transition: all 0.3s ease;
+  &-primary {
+    &:hover {
+      background-color: $desaturated-blue;
+      border: 1px solid darken($desaturated-blue, 2);
+    }
+    border: 1px solid darken($bright-blue, 2);
+    background-color: $bright-blue;
+    color: #fff;
+    box-shadow: 0px 18px 18px rgba($bright-blue, 0.3);
+  }
+  &-text {
+    &:hover {
+      color: $dark-blue;
+    }
+  }
+}

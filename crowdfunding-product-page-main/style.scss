@@ -29,8 +29,12 @@ body {
 
 a {
   text-decoration: none;
-  color: white;
   line-height: $l-height;
+}
+
+button {
+  border: none;
+  outline: none;
 }
 
 .container {
@@ -44,9 +48,17 @@ a {
 header {
   font-size: 1rem;
   height: 300px;
-  background: linear-gradient(to bottom, #000, transparent 40%),
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.644), transparent 40%),
     url("../images/image-hero-mobile.jpg");
   background-size: cover;
+  @media screen and (min-width: $bp-desktop) {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.459),
+        transparent 40%
+      ),
+      url("../images/image-hero-desktop.jpg");
+  }
 }
 
 // navbar
@@ -106,6 +118,7 @@ header {
       display: none;
     }
     &__menu {
+      box-shadow: none;
       display: flex !important;
       align-items: flex-end;
       justify-content: flex-end;
@@ -123,10 +136,18 @@ header {
 
 // section
 .section {
-  position: relative;
   padding: 2.5rem 1.5rem;
+  margin-bottom: 1.5rem;
   background-color: white;
   border-radius: 0.5rem;
+  border: thin solid rgba(0, 0, 0, 0.1);
+}
+
+.section-intro {
+  position: relative;
+  margin-top: -3.5rem;
+  text-align: center;
+
   &__image {
     position: absolute;
     top: calc(-56px / 2);
@@ -140,12 +161,7 @@ header {
     justify-content: space-between;
     gap: 0.5rem;
   }
-}
 
-.section-intro {
-  position: relative;
-  top: -3.5rem;
-  text-align: center;
   h1 {
     padding: 1rem 0;
   }
@@ -154,17 +170,27 @@ header {
     line-height: $l-height;
   }
   .btn-primary {
-    flex: 1;
+    width: 100%;
+  }
+
+  // desktop
+  @media screen and (min-width: $bp-desktop) {
+    .btn-primary {
+      width: auto;
+    }
   }
 }
 
 .btn {
+  font-family: $f-family;
   font-weight: $f-bold;
   font-size: $f-size;
+  cursor: pointer;
+  padding: 1rem 1.75rem;
   &-primary {
     border-radius: 5em;
-    padding: 1rem 0.5rem;
     background-color: $cl-m-cyan;
+    color: white;
   }
   &-bookmark {
     position: relative;
@@ -181,13 +207,12 @@ header {
       display: flex;
       align-items: center;
     }
-  }
-}
-
-.bookmark__text {
-  display: none;
-  padding-left: calc(56px + 0.25rem);
-  @media screen and (min-width: $bp-desktop) {
-    display: block;
+    .bookmark__text {
+      display: none;
+      padding-left: calc(56px + 0.25rem);
+      @media screen and (min-width: $bp-desktop) {
+        display: block;
+      }
+    }
   }
 }

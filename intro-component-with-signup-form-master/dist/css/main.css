@@ -210,6 +210,10 @@ body {
           box-shadow: 0 0.5rem rgba(0, 0, 0, 0.15);
 }
 
+.form--error .form__field input {
+  border-color: lightcoral;
+}
+
 .form__field {
   margin-bottom: 1rem;
 }
